@@ -1,4 +1,4 @@
-** Exercises Build Convention
+## Exercises Build Convention
 
 Exercise projects share the same build config, this is located in build-conventions sub-project.
 
@@ -8,7 +8,7 @@ based on `https://docs.gradle.org/current/samples/sample_sharing_convention_plug
 The `.build-conventions` wraps the build configuration as a plugin `griffio.exercise-conventions` to be used in the exercise projects,
 this composite  works effectively the same as using a gradle `buildSrc`.
 
-Conventions - flatten `src/main/kotlin` to `src`, mix Kotlin and Java sources, set the Main class.
+### Conventions - flatten `src/main/kotlin` to `src`, mix Kotlin and Java sources, set the Main class.
 
 ```
 plugins {
