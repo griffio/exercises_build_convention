@@ -8,7 +8,11 @@ based on `https://docs.gradle.org/current/samples/sample_sharing_convention_plug
 The `.build-conventions` wraps the build configuration as a plugin `griffio.exercise-conventions` to be used in the exercise projects,
 this composite  works effectively the same as using a gradle `buildSrc`.
 
-### Conventions - flatten `src/main/kotlin` to `src`, mix Kotlin and Java sources, set the Main class.
+Requires JDK 17 installed as foojay plugin is disabled
+
+### Conventions - flatten `src/main/kotlin` to `src`, mix Kotlin and Java sources, set the Main class, JDK 17 toolchain.
+
+settings.gradle.kts disables plugin `org.gradle.toolchains.foojay-resolver-convention` to automatically download jdks
 
 ```
 plugins {
