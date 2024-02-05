@@ -51,7 +51,7 @@ Run all exercises
 or each module exercise project
 
 ```
-./gradlew :some_training_module:exercise_1:run
+./gradlew :exercises:some_training_module:exercise_1:run
 ```
 
 
