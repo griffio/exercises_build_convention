@@ -1,6 +1,6 @@
 plugins {
     application
-    kotlin("jvm")
+    kotlin("jvm") // https://docs.gradle.org/current/userguide/compatibility.html#kotlin
 }
 
 group = "exercises"
@@ -25,5 +25,6 @@ application {
 
 kotlin {
     jvmToolchain(17)
+   // if setting.gradle.kts uses plugin org.gradle.toolchains.foojay-resolver-convention is enabled, this will be download jdk 17 from foojay.io
 }
 

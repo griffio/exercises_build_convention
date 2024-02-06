@@ -1,5 +1,5 @@
 plugins {
-    `kotlin-dsl`  // gradle uses a special internal version for compatibility reasons
+    `kotlin-dsl`  // gradle uses embedded version for plugins backwards compatibility
 }
 
 repositories {
@@ -7,5 +7,6 @@ repositories {
 }
 
 dependencies {
-  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21")
+  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
+  // https://docs.gradle.org/current/userguide/compatibility.html#kotlin
 }
