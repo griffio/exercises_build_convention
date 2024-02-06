@@ -46,7 +46,7 @@ kotlin {
 
 ```
 
-Run all exercises
+Run all exercises from the top-level directory
 
 ```
 ./gradlew run
@@ -58,4 +58,9 @@ or each module exercise project
 ./gradlew :exercises:some_training_module:exercise_1:run
 ```
 
+Use the Gradle Wrapper from a sub-project directory by referencing gradlew relatively.
 
+```
+cd exercises_build_convention/exercises/some_training_module/exercise_2
+../../../gradlew run
+```
