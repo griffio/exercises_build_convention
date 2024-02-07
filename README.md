@@ -5,7 +5,7 @@ Exercise projects share the same build config, this is located in build-conventi
 There is no top level build file - instead each exercise project has its own build file, there is composite build for conventions.
 based on `https://docs.gradle.org/current/samples/sample_sharing_convention_plugins_with_build_logic.html`
 
-The `.build-conventions` wraps the build configuration as a plugin `griffio.exercise-conventions` to be used in the exercise projects,
+The `gradle/build-conventions` (moved to gradle folder to keep top-level tidy) wraps the build configuration as a plugin `griffio.exercise-conventions` to be used in the exercise projects,
 this composite  works effectively the same as using a gradle `buildSrc`.
 
 Requires JDK 17 installed as foojay plugin is disabled
