@@ -71,3 +71,8 @@ cd exercises_build_convention/exercises/some_training_module/exercise_2
 
 ../../../gradlew run
 ```
+
+Run a task continuously, this will wait for changes to the source code and re-run saving startup time
+```
+./gradlew e:s:exercise_1:run --continuous
+```
