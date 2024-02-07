@@ -52,15 +52,22 @@ Run all exercises from the top-level directory
 ./gradlew run
 ```
 
-or each module exercise project
+or each exercise project individually
 
 ```
 ./gradlew :exercises:some_training_module:exercise_1:run
 ```
 
-Use the Gradle Wrapper from a sub-project directory by referencing gradlew relatively.
+same path abbreviated
+
+```
+./gradlew e:s:ex_1:run
+```
+
+Execute Gradle wrapper relatively from within exercise project
 
 ```
 cd exercises_build_convention/exercises/some_training_module/exercise_2
+
 ../../../gradlew run
 ```
