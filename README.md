@@ -2,6 +2,7 @@
 
 Exercise projects share the same build config, this is located in `gradle\build-conventions` sub-project.
 
+This is to be opened in Intellij at the root of the repo - with each exercise runnable in self-contained build.
 There is no top level build file - instead each exercise project has its own build file, there is composite build for conventions.
 based on `https://docs.gradle.org/current/samples/sample_sharing_convention_plugins_with_build_logic.html`
 
