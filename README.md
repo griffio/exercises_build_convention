@@ -9,11 +9,13 @@ based on `https://docs.gradle.org/current/samples/sample_sharing_convention_plug
 The `gradle/build-conventions` (moved to gradle folder to keep top-level tidy) wraps the build configuration as a plugin `griffio.exercise-conventions` to be used in the exercise projects,
 this `includeBuild` works effectively the same as using a top-level gradle `buildSrc` that can be named and located elsewhere.
 
-Requires JDK 17 installed as foojay plugin is disabled
+New exercise directories, where adding the build.gradle.kts, can be included in `settings.gradle.kts` for the build to run.
 
-### Conventions - flatten `src/main/kotlin` to `src`, mix Kotlin and Java sources, set the Main class, JDK 17 toolchain.
+Requires JAVA_HOME for JDK 17 installed - gradle.properties and settings.gradle.kts disables plugin `org.gradle.toolchains.foojay-resolver-convention` to automatically download jdks.
 
-settings.gradle.kts disables plugin `org.gradle.toolchains.foojay-resolver-convention` to automatically download jdks
+### Conventions 
+
+Flatten `src/main/kotlin`, `src/main/java`  to `src`, allow mix of Kotlin and Java sources, set the Main class, use a JDK 17 toolchain.
 
 ```
 plugins {
@@ -23,7 +25,6 @@ plugins {
 
 group = "exercises"
 version = "1.0-SNAPSHOT"
-
 
 repositories {
     mavenCentral()
@@ -42,9 +43,8 @@ application {
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(17) // could be any other JDK 
 }
-
 ```
 
 Run all exercises from the top-level directory
